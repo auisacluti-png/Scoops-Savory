@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scoops & Savory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<style>
+    /* -------------------- 
+       1. COLOR DEFINITIONS 
+       -------------------- */
+    /* Colors for website theme: 
+        Dark Pink: #BF5B77
+        Light Pink: #ef8098 (Used for borders/highlights)
+        Text Dark: #333333
+        Background Clean: #fffbfd
+    */
+
+    /* -------------------- 
+       2. BASE & BACKGROUND 
+       -------------------- */
+    body {
+        background-color: #fffbfd; 
+        font-family: 'Poppins', sans-serif;
+        color: #333333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+
+    /* -------------------- 
+       3. HEADER & NAVIGATION 
+       -------------------- */
+    header {
+        padding: 20px 0;
+        background: #ef8098;
+        margin: 0;
+        text-align: center;
+    }
+
+    .logo-img {
+        max-width: 200px;
+        height: auto;
+    }
+
+    nav {
+        background-color: #BF5B77;
+        padding: 10px;
+        position: sticky; 
+        top: 0; 
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #ef8098; 
+    }
+
+    /* -------------------- 
+       4. GRID LAYOUT 
+       -------------------- */
+    .grid-container-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+        flex: 1; 
+        padding: 0 10px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: auto auto;
+        gap: 25px;
+        max-width: 1000px;
+        width: 100%;
+    }
+
+    /* === MODIFIED GRID ITEM STYLE === */
+    .grid-item {
+        background-color: white;
+        padding: 40px; /* Increased padding */
+        border-radius: 20px; /* Sharper, "card-like" radius */
+        /* Enhanced shadow */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
+        /* Added light pink border for a pop */
+        border: 3px solid #e6c8d4; 
+    }
+    /* ============================== */
+
+    .grid-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .image-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    /* -------------------- 
+       5. MENU TYPOGRAPHY & STYLING 
+       -------------------- */
+    .menu-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2.5em;
+        color: #BF5B77;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 25px; /* Increased margin */
+        border-bottom: 2px solid #ef8098; 
+        padding-bottom: 10px;
+        letter-spacing: 1px;
+    }
+
+    .menu-subtitle {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.1em;
+        font-weight: 600;
+        color: #BF5B77;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+    .menu-list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 30px; /* Increased margin */
+    }
+
+    .menu-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0; /* Increased padding */
+        border-bottom: 1px dotted #ccc;
+        font-size: 1.1em; /* Increased font size */
+    }
+
+    .menu-item:last-child {
+        border-bottom: none;
+    }
+
+    .item-name {
+        font-weight: 400;
+    }
+
+    .item-price {
+        font-weight: 600;
+        color: #BF5B77;
+    }
+
+    /* Savory Menu Description Styling */
+    .menu-item.menu-description {
+        display: block;
+        padding-bottom: 15px;
+    }
+
+    .menu-item.menu-description .item-name, 
+    .menu-item.menu-description .item-price {
+        display: inline-block;
+    }
+
+    .menu-item.menu-description .item-name {
+        font-weight: 600;
+    }
+
+    .menu-item.menu-description p.description {
+        font-size: 0.9em;
+        color: #666;
+        margin: 2px 0 0 0;
+        line-height: 1.4;
+        font-style: italic;
+    }
+
+
+    /* -------------------- 
+       6. FOOTER 
+       -------------------- */
+    footer {
+        text-align: center;
+        background: #ef8098;
+        color: rgb(255, 255, 255);
+        padding: 15px 10px;
+        margin-top: 40px;
+        font-size: 0.9em;
+    }
+
+
+</style>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="asd.png" alt="Scoops & Savory logo" class="logo-img" >
+
+    </div>
+</header>
+<nav> 
+    <ul>
+        <li><a href="IceCream.html">Home</a></li>
+        <li><a href="Order.html">Place an Order</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="Help.html">Help</a></li>
+
+    </ul>
+</nav>
+
+<div class="grid-container-wrapper">
+    <div class="grid-container">
+        <div class="grid-item menu-section">
+            <h2 class="menu-title">Scoops Menu</h2>
+            <ul class="menu-list">
+                <li class="menu-item"><span class="item-name">Ice Cream</span><span class="item-price">₱20</span></li>
+            </ul>
+            
+            <h3 class="menu-subtitle">FLOATS</h3>
+            <ul class="menu-list">
+                <li class="menu-item"><span class="item-name">Coke, Rootbeer</span><span class="item-price">₱49</span></li>
+                <li class="menu-item"><span class="item-name">Chocolate, Matcha, Strawberry, Watermelon, Coffee</span><span class="item-price">₱59</span></li>
+            </ul>
+            
+            <h3 class="menu-subtitle">SUNDAE</h3>
+            <ul class="menu-list">
+                <li class="menu-item"><span class="item-name">Chocolate, Caramel</span><span class="item-price">6oz: ₱25 | 8oz: ₱35</span></li>
+                <li class="menu-item"><span class="item-name">Matcha, Oreo, Rocky Road</span><span class="item-price">6oz: ₱35 | 8oz: ₱45</span></li>
+                <li class="menu-item"><span class="item-name">Butterscotch, Strawberry</span><span class="item-price">6oz: ₱35 | 8oz: ₱45</span></li>
+            </ul>
+            
+            <h3 class="menu-subtitle">DRINKS</h3>
+            <ul class="menu-list">
+                <li class="menu-item"><span class="item-name">Watermelon Soda, Strawberry Soda, Iced Coffee, Iced Matcha, Iced Chocolate, Strawberry Milk</span><span class="item-price">₱55</span></li>
+                <li class="menu-item"><span class="item-name">Soft Drinks</span><span class="item-price">₱25</span></li>
+            </ul>
+        </div>
+
+        <div class="grid-item image-box">
+            <img src="scoopsdisplay.jpg" alt="Dessert Display">
+        </div>
+
+        <div class="grid-item image-box">
+            <img src="savorydisplay.jpg" alt="Savory Display">
+        </div>
+
+        <div class="grid-item menu-section">
+            <h2 class="menu-title">Savory Menu</h2>
+            
+            <ul class="menu-list">
+                <li class="menu-item menu-description">
+                    <span class="item-name">Chicken Tocino</span><span class="item-price">₱49</span>
+                    <p class="description">Homemade chicken with egg and chowfan rice.</p>
+                </li>
+                <li class="menu-item menu-description">
+                    <span class="item-name">Chicken Sisig</span><span class="item-price">₱49</span>
+                    <p class="description">Healthy chicken sisig with egg and chowfan rice.</p>
+                </li>
+                <li class="menu-item menu-description">
+                    <span class="item-name">Chicken Karaage</span><span class="item-price">₱49</span>
+                    <p class="description">Yummy chicken karaage with egg and chowfan rice.</p>
+                </li>
+                <li class="menu-item menu-description">
+                    <span class="item-name">Chicken Teriyaki</span><span class="item-price">₱49</span>
+                    <p class="description">Tasty blend of chicken teriyaki with egg and chowfan rice.</p>
+                </li>
+            </ul>
+            
+            <h3 class="menu-subtitle">SIDES & COMBOS</h3>
+            <ul class="menu-list">
+                <li class="menu-item"><span class="item-name">French Fries</span><span class="item-price">₱45</span></li>
+                <li class="menu-item"><span class="item-name">Any rice meal with coke or rootbeer float</span><span class="item-price">₱89</span></li>
+                <li class="menu-item"><span class="item-name">Any rice meal with any special drinks</span><span class="item-price">₱99</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>©2025 Scoops & Savory</p>
+    <p>Manast P. Guevarra Avenue, Brgy. Poblacion I, Santa Cruz, Laguna</p>
+    <p>Contact Number: 0906-002-7526</p>
+</footer>
+
+</body>
+</html>
